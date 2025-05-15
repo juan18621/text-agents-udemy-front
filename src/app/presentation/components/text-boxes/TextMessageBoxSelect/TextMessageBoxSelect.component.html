@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="handleSubmit()" class="flex flex-grow items-center h-16 rounded-xl bg-white w-full px-4">
+  <div class="flex-grow">
+      <div class="relative w-full">
+          <input type="text" autofocus
+              class="flex w-full border rounded-xl text-gray-800 focus:outline-none focus:border-indigo-300 pl-4 h10"
+              [placeholder]="placeholder"
+              formControlName="prompt"
+              >
+      </div>
+    </div>
+    
+    <select formControlName="selectedOption" class="w-2/5 ml-5 border rounded-xl text-gray-800 focus:outline-none focus:border-indigo-300 pl-4 h-10">
+            
+             <option value="">Seleccione</option>
+             @for (option of options; track option.id) {
+                <option [value]="option.id">{{option.text}}</option>
+             }
+          </select>
+
+
+  <div class="ml-4">
+      <button [disabled]="form.invalid" class="btn-primary" type="submit">
+          <i class="fa-regular fa-paper-plane"></i>
+      </button>
+  </div>
+</form>

@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+/generated/* 
+!/generated/.gitkeep
+
 # Node
 /node_modules
 npm-debug.log
