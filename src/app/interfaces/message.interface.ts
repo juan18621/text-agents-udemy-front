@@ -7,5 +7,6 @@ export interface Message {
     errors: string[];
   }
   audioUrl?: string;
+  imageInfo?: any;
 }
 
