@@ -10,6 +10,7 @@ import { TypingLoaderComponent } from '@components/typingLoader/typingLoader.com
 import { Message } from '@interfaces/message.interface';
 import { OpenaiService } from 'app/presentation/services/openai.service';
 import { GptMessageEditableImageComponent } from '@components/GptMessageEditableImage/GptMessageEditableImage.component';
+import { environment } from 'environments/environment.development';
 
 @Component({
   selector: 'app-image-tunnig-page',
@@ -34,7 +35,7 @@ export default class ImageTunnigPageComponent {
        text: 'Dummy image',
        imageInfo: {
          alt: 'Dummy image',
-         url: 'http://localhost:3000/gpt/image-generation/1747325235428.png'
+         url: environment.dummyImage
        }
      }
   ]);
